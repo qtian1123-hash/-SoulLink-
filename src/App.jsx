@@ -502,7 +502,7 @@ export default function TarotApp() {
       const userPrompt = `用户问题: "${question}"\n\n牌阵:\n${cardDescriptions}\n\n请解读。`;
 
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
+        `/api/google/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
